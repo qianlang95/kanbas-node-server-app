@@ -1,5 +1,22 @@
-const express = require('express')
+
+import express from 'express';
+import Hello from "./hello.js"
+import Lab5 from "./lab5.js";
+import cors from "cors";
+import CourseRoutes from "./courses/routes.js";
+import ModuleRoutes from "./modules/routes.js";
+import "dotenv/config";
+// import session from "express-session";
+
 const app = express()
-app.get('/hello', (req, res) => {res.send('Life is good!')})
-app.get('/', (req, res) => {res.send('Welcome to Full Stack Development!')})
-app.listen(4000)
+app.use(cors());
+app.use(express.json());
+
+Hello(app)
+Lab5(app);
+CourseRoutes(app);
+ModuleRoutes(app);
+
+
+
+app.listen(process.env.PORT || 4000)
