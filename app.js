@@ -23,7 +23,7 @@ const app = express()
 app.use(cors(
     {
         credentials: true,
-        origin: "http://localhost:3003",
+        origin: 'https://a6--helpful-pothos-1c4b49.netlify.app',
      
     }
 ));
