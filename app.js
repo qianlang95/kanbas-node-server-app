@@ -24,6 +24,7 @@ app.use(cors(
     {
         credentials: true,
         origin: 'https://a6--helpful-pothos-1c4b49.netlify.app',
+        // origin:'http://localhost:3000',
      
     }
 ));
